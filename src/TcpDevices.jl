@@ -139,6 +139,8 @@ export AgilentE36312A, SRSPS310, VersatilePower
 ## Waveform Generator
 export Keysight33612A
 ## MicroController
+## Network Analyzer
+export PicoVNA106, PicoVNA108
 
 export scan_network
 
