@@ -3,7 +3,6 @@
 """
 abstract type NetworkAnalyzer <: Instrument end
 
-
 """
 Supported models
 - `PicoVNA106`
