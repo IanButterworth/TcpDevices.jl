@@ -4,7 +4,7 @@ using InstrumentConfig
 const tcp_config = InstrumentConfig.Config(
     ".tcp_instruments.yml",
     @__MODULE__,
-	example = readdir(dirname(joinpath(@__DIR__)), join = true)[1])
+	example = joinpath(dirname(@__DIR__), ".tcp_instruments.yml"))
 
 function get_config()
     return InstrumentConfig.get_config(tcp_config)

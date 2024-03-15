@@ -48,6 +48,5 @@ Teensy4.1:
 
 # VNA
 
-PicoVNA:
-    alias: "picovna"
+PicoVNA106:
     address: "192.0.0.1:5025"
