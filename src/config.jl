@@ -4,7 +4,7 @@ using InstrumentConfig
 const tcp_config = InstrumentConfig.Config(
     ".tcp_instruments.yml",
     @__MODULE__,
-	example = readdir(join = true)[1])
+	example = readdir(dirname(joinpath(@__DIR__)), join = true)[1])
 
 function get_config()
     return InstrumentConfig.get_config(tcp_config)
@@ -35,7 +35,7 @@ function create_aliases(config; ignore=[])
             error("""
             $(config.loaded_file) contains device of name:
                 $device
-            
+
             This is not a valid device.
 
             For a list of available devices use `help> Instrument`
@@ -45,7 +45,7 @@ function create_aliases(config; ignore=[])
         alias = get(data, "alias", "")
         isempty(alias) && continue
         @eval global const $(Symbol(alias)) = $(device_type)
-        @eval export $(Symbol(alias)) 
+        @eval export $(Symbol(alias))
         alias_print("$alias = $device")
     end
 end
