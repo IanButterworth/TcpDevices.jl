@@ -115,30 +115,30 @@ function set_measurement_to_impedance_and_phase(ia::Instr{PicoVNA106})
 end
 
 
-@recipe function f(impedance::Array{typeof((1.0 + 0im)R), 1}; complex=false)
-    title := "Impedance"
-    layout := (2, 1)
-    real_label, imag_label = if complex
-        "Real", "Imaginary"
-    else
-        "Amplitude", "Phase"
-    end
-    label := [real_label, imag_label]
-    @series begin
-        subplot := 1
-        label := real_label
-        legend := :outertopright
-        return complex ?  real(impedance) : abs.(impedance)
-    end
-    @series begin
-        title := ""
-        subplot := 2
-        label := imag_label
-        legend := :outertopright
-        linecolor := :red
-        return complex ?  imag(impedance) : rad2deg.(angle.(impedance))
-    end
-end
+# @recipe function f(impedance::Array{typeof((1.0 + 0im)R), 1}; complex=false)
+#     title := "Impedance"
+#     layout := (2, 1)
+#     real_label, imag_label = if complex
+#         "Real", "Imaginary"
+#     else
+#         "Amplitude", "Phase"
+#     end
+#     label := [real_label, imag_label]
+#     @series begin
+#         subplot := 1
+#         label := real_label
+#         legend := :outertopright
+#         return complex ?  real(impedance) : abs.(impedance)
+#     end
+#     @series begin
+#         title := ""
+#         subplot := 2
+#         label := imag_label
+#         legend := :outertopright
+#         linecolor := :red
+#         return complex ?  imag(impedance) : rad2deg.(angle.(impedance))
+#     end
+# end
 
 """
     get_channel(i::Instr{PicoVNA106})
