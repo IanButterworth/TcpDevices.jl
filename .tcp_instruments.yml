@@ -9,7 +9,7 @@ KeysightDMM34465A: "10.1.30.38"
 SDS1204XE:
     alias: "SDSXE"
     address: "192.168.1.94:5025"
-    
+
 AgilentDSOX4034A:
     alias: "Scope350MHz"
     address: "10.1.30.32"
@@ -21,10 +21,10 @@ AgilentDSOX4024A:
 
 AgilentE36312A:
     address: "10.1.30.34"
-    
+
 VersatilePower:
     address: "10.1.30.35:8003"
-    
+
 SRSPS310:
     prologix: 2
     address: "10.1.30.37:1234"
@@ -36,12 +36,18 @@ Keysight33612A: "10.1.30.47"
 
 Agilent4294A:
     address: "10.1.30.39:5025"
-    
+
 Agilent4395A:
     address: "10.1.30.38:1234"
 
 # MCU
 
 Teensy4.1:
-    alias: "Teensy:
+    alias: "Teensy"
     address: "192.1.1.1:5966"
+
+# VNA
+
+PicoVNA:
+    alias: "picovna"
+    address: "192.0.0.1:5025"

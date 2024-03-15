@@ -116,7 +116,7 @@ end
 
 
 """
-    scan_network(; network_id="10.1.30.0", host_range=1:255)
+    scan_network(; network="10.1.30.0", host_range=1:255)
 
 By default, report all found devices between addresses `10.1.30.1` to `10.1.30.255`.
 

@@ -35,5 +35,5 @@ By default `scan_network` will check the addresses between
 10.1.30.1 to 10.1.30.255 but you may need to scan a different range,
 say: 10.1.150.1-255
 ```julia
-scan_network(; ip_network="10.1.150.")
+scan_network(; network="10.1.150.")
 ```

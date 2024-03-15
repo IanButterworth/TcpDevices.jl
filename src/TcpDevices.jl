@@ -31,7 +31,7 @@ Once you have created a config file you can change it with
 edit_config()
 ```
 
-If the instrument has its address in the config file you can now connect with: 
+If the instrument has its address in the config file you can now connect with:
 ```
 handle = initialize({Instrument-Type})
 ```
@@ -58,7 +58,7 @@ const A = u"A"
 const Hz = u"Hz"
 
 export Instrument
-export Oscilloscope, Multimeter, PowerSupply, WaveformGenerator, ImpedanceAnalyzer
+export Oscilloscope, Multimeter, PowerSupply, WaveformGenerator, ImpedanceAnalyzer, VectorNetworkAnalyzer
 
 export save, load
 
@@ -157,6 +157,7 @@ include("power_supply/all.jl")
 include("waveform_generator/all.jl")
 include("impedance_analyzer/all.jl")
 include("multimeter/all.jl")
+include("network_analyzer/all.jl")
 
 include("emulator/emulator.jl")
 end #endmodule
